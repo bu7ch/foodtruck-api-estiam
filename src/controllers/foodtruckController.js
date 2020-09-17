@@ -17,7 +17,7 @@ const Foodtruck = require("../models/foodtruck");
 exports.show = async (req, res, next) => {
   try {
     const foodtruck = await Foodtruck.findOne({ _id: req.params.id });
-    res.json(foodtruck)
+    res.json(foodtruck);
   } catch (error) {
     next(error);
   }
@@ -25,7 +25,7 @@ exports.show = async (req, res, next) => {
 exports.all = async (req, res, next) => {
   try {
     const foodtrucks = await Foodtruck.find({});
-    res.json(foodtrucks);
+    res.render("foodtrucks", { foodtrucks: foodtrucks });
   } catch (error) {
     next(error);
   }
