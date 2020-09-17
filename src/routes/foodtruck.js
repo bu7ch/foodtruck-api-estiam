@@ -5,6 +5,7 @@ const foodtruckController = require("../controllers/foodtruckController");
 
 router.get("/", foodtruckController.all);
 router.get("/:id", foodtruckController.show);
-router.post("/new", foodtruckController.store);
+router.get("/new",foodtruckController.add)
+router.post("/new",foodtruckController.store);
 
 module.exports = router;

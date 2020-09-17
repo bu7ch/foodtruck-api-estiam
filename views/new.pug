@@ -1,0 +1,17 @@
+extends layout
+block content
+  h3 Ajouter un foodtruck
+  form(action='/api/foodtruck/new', method='POST').ui.form
+  .field
+    label  Name
+    input(type='text', name='name', placeholder='Name')
+  .field
+    label  address
+    input(type='text', name='address', placeholder='address')
+  .field
+    label  phone
+    input(type='text', name='phone', placeholder='phone number')
+  .field
+    label  speciality
+    input(type='text', name='speciality', placeholder='speciality')
+  button.ui.button(type='submit') Submit
